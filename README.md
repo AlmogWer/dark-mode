@@ -27,7 +27,7 @@ npm-start -g
 ## Links
 
 - [Repo](https://github.com/AlmogWer/dark-mode "DarkMode Repo")
-- [Live](https://almogwer-darkmode.netlify.app/"Live View")
+- [Live](https://almogwer-darkmode.netlify.app/ "Live View")
 
 ## Screenshots
 

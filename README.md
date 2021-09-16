@@ -17,6 +17,8 @@ React dark-mode toggler using imported toggler and dates using moment.js
 ```
 npm install
 npm install react-icons --save
+npm i react-dark-mode-toggle
+npm install moment --save 
 ```
 
 ```

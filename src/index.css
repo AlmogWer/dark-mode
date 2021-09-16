@@ -12,12 +12,12 @@ Global Styles
   box-sizing: border-box;
 }
 .dark-theme {
-  --clr-bcg: #282c35;
+  --clr-bcg: linear-gradient(to right, #3b3833, #46322d);
   --clr-font: #fff;
   --clr-primary: #e795b1;
 }
 .light-theme {
-  --clr-bcg: #fff;
+  --clr-bcg: linear-gradient(to right, #ffecd2, #fcb69f);
   --clr-font: #282c35;
   --clr-primary: #d23669;
 }
@@ -58,6 +58,7 @@ Navbar
   max-width: 600px;
   margin: 0 auto;
 }
+
 .post {
   margin-bottom: 3rem;
 }
@@ -87,4 +88,15 @@ Navbar
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+.light-theme .articles {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.205);
+  border-radius: 1rem;
+}
+.dark-theme .articles {
+  padding: 1rem;
+  background-color: rgba(83, 83, 83, 0.205);
+  border-radius: 1rem;
 }

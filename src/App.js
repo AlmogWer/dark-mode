@@ -1,39 +1,37 @@
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import Article from "./Article";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 function App() {
-  const [theme, setTheme] = useState("light-theme");
-  const themeToggle = () => {
-    if (theme === "light-theme") {
-      setTheme("dark-theme");
+  const [theme, setTheme] = useState(true);
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.className = "light-theme";
     } else {
-      setTheme("light-theme");
+      document.documentElement.className = "dark-theme";
     }
-  };
+  }, [theme]);
   return (
-    <body className={theme}>
-      <main>
-        <nav>
-          <div className="nav-center">
-            <h1>Almogwer blog</h1>
-            <button
-              className="btn"
-              onClick={() => {
-                themeToggle();
-              }}
-            >
-              toggle
-            </button>
-          </div>
-        </nav>
-        <section className="articles">
-          {data.map((item) => {
-            return <Article key={item.id} {...item} />;
-          })}
-        </section>
-      </main>
-    </body>
+    <main>
+      <nav>
+        <div className="nav-center">
+          <h1>Almogwer blog</h1>
+          <DarkModeToggle
+            size={100}
+            className="toggler"
+            onChange={setTheme}
+            checked={theme}
+          />
+        </div>
+      </nav>
+      <section className="articles">
+        {data.map((item) => {
+          return <Article key={item.id} {...item} />;
+        })}
+      </section>
+    </main>
   );
 }
 

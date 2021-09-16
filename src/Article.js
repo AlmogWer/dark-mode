@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 const Article = (article) => {
-  const { id, title, length, date, snippet } = article;
+  const { title, length, date, snippet } = article;
 
   return (
     <article className="post">
